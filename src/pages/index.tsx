@@ -3,6 +3,9 @@ import { Footer, Header, Link } from '../components';
 import styles from '../styles/Home.module.css'
 import { FC, useEffect } from 'react';
 import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+// gsap.registerPlugin(ScrollTrigger);
 
 const person = {
   firstName: 'Hicham',
@@ -19,7 +22,7 @@ const Home: FC = () => {
   // gsap.registerPlugin()
 
   useEffect(() => {
-    gsap.from('#title, #desc',1,{x: '1000px', duration: 1, delay: .5, ease: 'back.out(.8)', stagger: .4})
+    gsap.from('#title, #desc',1,{dispaly: 'none', x: '1000px', duration: 1, delay: .5, ease: 'back.out(.8)', stagger: .4})
   }, [])
 
   return (
@@ -34,7 +37,7 @@ const Home: FC = () => {
       <main className={styles.main} style={{color: '#fff'}}>
 
         <div className={styles.title} style={{maxWidth: 700}} id='title'>
-          <h1 className={styles.title} style={title}>
+          <h1 className={styles.title}>
           Frontend web developer {person.portfolio}
           </h1>
 
@@ -43,8 +46,8 @@ const Home: FC = () => {
           </h4>
         </div>
 
-       <div style={description} id='desc'>
-         <p style={pargraph}>
+       <div className={styles.description} id='desc'>
+         <p className={styles.pargraph}>
             Hello, my name is {person.firstName} {person.lastName}. 
             I am an award-winning {person.jobTitle}web 
             developer and UI/UX javascript specialist. Check out 
@@ -65,6 +68,6 @@ const Home: FC = () => {
 
 export default Home
 
-const description = {display: 'flex', flex: 1, alignItems: 'center', maxWidth: 700, fontSize: 20}
-const pargraph = {lineHeight: '2.5rem'}
-const title = {margin: '25px 0'}
+// const description = {display: 'flex', flex: 1, alignItems: 'center', maxWidth: 700, fontSize: 20}
+// const pargraph = {lineHeight: '2.5rem'}
+// const title = {margin: '25px 0'}

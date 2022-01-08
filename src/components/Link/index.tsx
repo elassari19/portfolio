@@ -10,12 +10,13 @@ interface IProps {
   style?: {};
   onClick?: any;
   id?: string;
+  className?: string;
 }
 
-const index: FC<IProps> = ({ children, href, style, onClick, title, id }) => {
+const index: FC<IProps> = ({ children, href, style, onClick, title, id, className }) => {
   return (
     <Link href={href} >
-      <a style={style} className={styles.anchor} onClick={onClick} id={id}>
+      <a style={style} className={className} onClick={onClick} id={id}>
         {title}
         {children}
       </a>
