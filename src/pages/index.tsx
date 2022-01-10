@@ -67,7 +67,3 @@ const Home: FC = () => {
 }
 
 export default Home
-
-// const description = {display: 'flex', flex: 1, alignItems: 'center', maxWidth: 700, fontSize: 20}
-// const pargraph = {lineHeight: '2.5rem'}
-// const title = {margin: '25px 0'}

@@ -1,22 +1,9 @@
-// import gsap from 'gsap';
 import React, { FC, useEffect } from 'react'
 import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { Link } from '..'
 import styles from '../../styles/Home.module.css'
 
 const index: FC = () => {
-
-
-  // useEffect(() => {
-
-  //   gsap.from("#footer", {
-  //     duration: .5,
-  //     opacity: 0,
-  //     y: 100,
-  //     stagger: .2,
-  //   });
-
-  // }, []);
 
   const data = [
     {
@@ -39,7 +26,7 @@ const index: FC = () => {
 
   return (
     <footer className={styles.footer}>
-    <div style={{ paddingTop: 15 , display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+    <div style={{ padding: 15 , display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
 
       {
         data.map(item => (

@@ -28,8 +28,8 @@ const index: FC = () => {
       title: 'articles'
     },
     {
-      href: '/about',
-      title: 'about'
+      href: '/contact',
+      title: 'contact'
     },
   ]
 

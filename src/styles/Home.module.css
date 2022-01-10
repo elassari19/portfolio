@@ -225,3 +225,41 @@
 .skillItem span {
   margin: 0 10px;
 }
+
+/*article*/
+
+.content{
+  font-family: serif;
+}
+
+.content a{
+  text-decoration: none;
+  color: #009;
+}
+
+.article {
+  max-width: 650px;
+}
+
+.article p {
+  font-size: 1.05rem;
+}
+
+.article pre {
+  background-color: #111a;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px;
+  border-radius: 6px;
+  overflow: auto;
+}
+
+/* contact*/
+.contact {
+  color: #fff;
+  max-width: 650px;
+}
+
+.contact span {
+  color: #44e
+}
