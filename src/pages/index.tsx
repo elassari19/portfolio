@@ -5,7 +5,8 @@ import { FC, useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+// gsap.core.globals('ScrollTrigger', ScrollTrigger);
 
 const person = {
   firstName: 'Hicham',
@@ -18,8 +19,6 @@ const person = {
 }
 
 const Home: FC = () => {
-
-  // gsap.registerPlugin()
 
   useEffect(() => {
     gsap.from('#title, #desc',1,{dispaly: 'none', x: '1000px', duration: 1, delay: .5, ease: 'back.out(.8)', stagger: .4})

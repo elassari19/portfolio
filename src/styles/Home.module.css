@@ -229,12 +229,13 @@
 /*article*/
 
 .content{
-  font-family: serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 
 .content a{
   text-decoration: none;
-  color: #009;
+  color: rgb(2, 2, 255);
 }
 
 .article {

@@ -31,7 +31,7 @@ const index: FC = () => {
       <Header/>
 
       <main className={styles.main}>
-        <div className={styles.flex}>
+        <div className={styles.flex} style={{flexDirection: 'column', flex: 1}}>
 
           <Tween from={{x: 1000, opacity: 0}} duration={1} stagger={.2}>
             <div className={styles.contact}>
@@ -45,10 +45,11 @@ const index: FC = () => {
 
             <div className={styles.contact} style={{color: '#fff'}}>
               <h3>
-              Let's get social
-              Follow my online fan page on <Link style={{backgroundColor: '#555', color: '#eee', padding: 5, borderRaduis: 3}} href={social[0].href}><>{social[0].title} <span>{social[0].icon} </span></></Link> 
-              and profiles on <Link style={{backgroundColor: '#555', color: '#eee', padding: 5, borderRaduis: 3}} href={social[1].href}><>{social[1].title}<span>{social[1].icon} </span></></Link> 
-              and <Link style={{backgroundColor: '#555', color: '#eee', padding: 5, borderRaduis: 3}} href={social[2].href}><>{social[2].title} <span>{social[2].icon}</span></></Link>.
+                Let's get social
+                Follow my online fan page on 
+                <div style={{margin: 15}}><Link style={{backgroundColor: '#555', color: '#eee', padding: 5, borderRaduis: 3}} href={social[0].href}><>{social[0].title} <span>{social[0].icon}</span></></Link></div>
+                <div style={{margin: 15}}><Link style={{backgroundColor: '#555', color: '#eee', padding: 5, borderRaduis: 3}} href={social[2].href}><>{social[2].title} <span>{social[2].icon}</span></></Link></div>
+                <div style={{margin: 15}}><Link style={{backgroundColor: '#555', color: '#eee', padding: 5, borderRaduis: 3}} href={social[1].href}><>{social[1].title} <span>{social[1].icon}</span></></Link></div>
               </h3>
             </div>
 
