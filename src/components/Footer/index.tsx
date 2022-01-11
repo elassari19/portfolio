@@ -3,7 +3,7 @@ import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { Link } from '..'
 import styles from '../../styles/Home.module.css'
 
-const index: FC = () => {
+const Index: FC = () => {
 
   const data = [
     {
@@ -42,4 +42,4 @@ const index: FC = () => {
   </footer>  )
 }
 
-export default index
+export default Index

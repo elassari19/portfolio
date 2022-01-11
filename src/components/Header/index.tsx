@@ -5,7 +5,7 @@ import styles from '../../styles/Home.module.css'
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai';
 import { IoIosArrowBack } from 'react-icons/io'
 
-const index: FC = () => {
+const Index: FC = () => {
 
   const {pathname, back} = useRouter();
 
@@ -84,4 +84,4 @@ const index: FC = () => {
   )
 }
 
-export default index
+export default Index
