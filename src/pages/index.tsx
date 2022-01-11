@@ -2,9 +2,9 @@ import Head from 'next/head'
 import { Footer, Header, Link } from '../components';
 import styles from '../styles/Home.module.css'
 import { FC, useEffect } from 'react';
+
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger);
 
 const person = {
