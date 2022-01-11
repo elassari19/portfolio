@@ -9,7 +9,7 @@ import { Reveal, Tween } from 'react-gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-const Index: FC = () => {
+const index: FC = () => {
 
   const sel = data.map(item=> `#${item.id}`);
 
@@ -99,4 +99,4 @@ const Index: FC = () => {
   )
 }
 
-export default Index
+export default index

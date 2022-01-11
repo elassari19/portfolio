@@ -4,7 +4,7 @@ import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { Footer, Header, Link } from '../../components'
 import styles from '../../styles/Home.module.css'
 
-const Index: FC = () => {
+const index: FC = () => {
 
   const social = [
     {
@@ -64,4 +64,4 @@ const Index: FC = () => {
   )
 }
 
-export default Index
+export default index
