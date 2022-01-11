@@ -5,7 +5,7 @@ import { Footer, Header, Link } from '../../components'
 import styles from '../../styles/Home.module.css'
 import { reactTopics } from './data'
 
-const index: FC = () => {
+const Index: FC = () => {
 
   const [content, setContent] = useState<number>(2)
 
@@ -91,4 +91,4 @@ const index: FC = () => {
   )
 }
 
-export default index
+export default Index

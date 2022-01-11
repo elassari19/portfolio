@@ -4,7 +4,7 @@ import { BsFacebook, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { Footer, Header, Link } from '../../components'
 import styles from '../../styles/Home.module.css'
 
-const index: FC = () => {
+const Index: FC = () => {
 
   const social = [
     {
@@ -45,7 +45,7 @@ const index: FC = () => {
 
             <div className={styles.contact} style={{color: '#fff'}}>
               <h3>
-                Let's get social
+                Let\'s get social
                 Follow my online fan page on 
                 <div style={{margin: 15}}><Link style={{backgroundColor: '#555', color: '#eee', padding: 5, borderRaduis: 3}} href={social[0].href}><>{social[0].title} <span>{social[0].icon}</span></></Link></div>
                 <div style={{margin: 15}}><Link style={{backgroundColor: '#555', color: '#eee', padding: 5, borderRaduis: 3}} href={social[2].href}><>{social[2].title} <span>{social[2].icon}</span></></Link></div>
@@ -64,4 +64,4 @@ const index: FC = () => {
   )
 }
 
-export default index
+export default Index

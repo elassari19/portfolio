@@ -29,8 +29,8 @@ const index: FC = () => {
     <div style={{ padding: 15 , display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
 
       {
-        data.map(item => (
-          <Link href={item.href} style={{ backgroundColor: item.color || '#0a66c2', padding: '5px 10px', borderRadius: 2, margin: '0 10px', textDecoration: 'none'}}>
+        data.map((item, idx) => (
+          <Link key={idx} href={item.href} style={{ backgroundColor: item.color || '#0a66c2', padding: '5px 10px', borderRadius: 2, margin: '0 10px', textDecoration: 'none'}}>
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: 90, fontSize: 15}}>
               <span style={{color: '#fff'}}>{item.title}</span> {item.icon}
             </div>
