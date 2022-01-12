@@ -4,8 +4,8 @@ import styles from '../styles/Home.module.css'
 import { FC, useEffect } from 'react';
 
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+// import ScrollTrigger from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger);
 
 const person = {
   firstName: 'Hicham',
@@ -13,8 +13,8 @@ const person = {
   jobTitle: 'Frontend ',
   skills: 'React and React native (expo cli)',
   email: 'elassari19@gmail.com',
-  articles: <Link href={'/articles'} title='Articles' />,
-  portfolio: <Link href={'/project'} title='project' />,
+  articles: <Link href={'/Articles'} title='Articles' />,
+  portfolio: <Link href={'/Work'} title='project' />,
 }
 
 const Home: FC = () => {

@@ -1,17 +1,16 @@
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC } from 'react'
 import { BsGithub } from 'react-icons/bs'
 import { GiWorld } from 'react-icons/gi'
-import { Footer, Header, Link, Skills } from '../../components'
-import styles from '../../styles/Home.module.css'
-import data from './data'
+import { Footer, Header, Link, Skills } from '../components'
+import styles from '../styles/Home.module.css'
+import {workData} from '../constant/data'
 import gsap from 'gsap'
 import { Reveal, Tween } from 'react-gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Head from 'next/head'
 gsap.registerPlugin(ScrollTrigger);
 
-const index: FC = () => {
-
-  const sel = data.map(item=> `#${item.id}`);
+const Work: FC = () => {
 
   const mouseOver = (id: string) => {
     gsap.to(`#${id}`,{duration: .5, y: -10, scale: 1.2})
@@ -24,6 +23,9 @@ const index: FC = () => {
   return (
     <div className={styles.container} >
 
+      <Head>
+        <title> My Works</title>
+      </Head>
       <Header/>
 
       <main className={styles.main}>
@@ -35,7 +37,7 @@ const index: FC = () => {
           <Reveal>
             <Tween from={{y: 300, opacity: 0}} stagger={.2}>
           {
-            data.map((item, idx)=>{
+            workData.map((item)=>{
               const {title, technology, url, image, code, id} = item
               return(
                 <div key={title} className={styles.card} id={id} onMouseOver={()=>mouseOver(id)} onMouseLeave={()=>mouseLeave(id)}>
@@ -72,7 +74,7 @@ const index: FC = () => {
                         const {name, Logo} = item;
                         return(
                         <div key={index}>
-                          <Link href={''} className={styles.visit} >
+                          <Link href={'/work'} className={styles.visit} >
                             <Logo size={25} color='inherit' />
                           </Link>
                           <h5 style={{margin: 0}}>{name}</h5>
@@ -99,4 +101,4 @@ const index: FC = () => {
   )
 }
 
-export default index
+export default Work

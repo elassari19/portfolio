@@ -1,8 +1,84 @@
-// {tag: '', str: ``},
+import { TiHtml5,TiCss3 } from 'react-icons/ti'
+import { FaSass, FaReact } from 'react-icons/fa'
+import { SiJavascript, SiStyledcomponents } from 'react-icons/si'
+import { ReactNode } from 'react'
+import { Link } from '../components';
 
-import { Link } from "../../components"
+interface Itechnology {
+  Logo: ReactNode;
+  name: string;
+}
 
-export const reactTopics = [
+export interface IProject {
+  title: string;
+  technology: Itechnology[];
+  url: string;
+  imgae: string;
+  code: string;
+  id: string;
+}
+
+const workData = [
+  {
+    title: 'Hotel Reservations',
+    technology: [{Logo: FaReact, name: 'ReactJS'},{Logo: FaSass, name: 'Sass'}],
+    url: 'https://elassari19.github.io/reservation/',
+    image: '/reservation.bmp',
+    code: 'https://github.com/elassari19/reservation',
+    id: 'data0'
+  },
+  {
+    title: 'Github User Info',
+    technology: [{Logo: FaReact, name: 'ReactJS'},{Logo:SiStyledcomponents, name: 'Styled-C'}],
+    url: 'https://elassari19.github.io/github-user-info/#/',
+    image: '/github.bmp',
+    code: 'https://github.com/elassari19/github-user-info',
+    id: 'data1'
+  },
+  {
+    title: 'E-commerce',
+    technology: [{Logo: FaReact, name: 'ReactJS'},{Logo:SiStyledcomponents, name: 'Styled-C'}],
+    url: 'https://elassari19.github.io/e_commerce/',
+    image: '/ecommerce.bmp',
+    code: 'https://github.com/elassari19/e_commerce',
+    id: 'data2'
+  },
+  {
+    title: 'CRUD App',
+    technology: [{Logo: FaReact, name: 'ReactJS'},{Logo:SiStyledcomponents, name: 'Styled-C'}],
+    url: 'https://elassari19.github.io/crud/',
+    image: '/crud.bmp',
+    code: 'https://github.com/elassari19/crud',
+    id: 'data3'
+  },
+  {
+    title: 'Books Shopping Cart',
+    technology: [{Logo: FaReact, name: 'ReactJS'},{Logo:SiStyledcomponents, name: 'Styled-C'}],
+    url: 'https://elassari19.github.io/shopping_card/',
+    image: '/books.bmp',
+    code: 'https://github.com/elassari19/shopping_card',
+    id: 'data4'
+  },
+  {
+    title: 'Memory Game',
+    technology: [{Logo: FaReact, name: 'ReactJS'},{Logo: TiCss3, name: 'CSS3'}],
+    url: 'https://elassari19.github.io/react_memory_game/',
+    image: '/game.bmp',
+    code: 'https://github.com/elassari19/react_memory_game',
+    id: 'data5'
+  },
+  {
+    title: 'Book Library',
+    technology: [{Logo: TiHtml5, name: 'HTML5'},{Logo: TiCss3, name: 'CSS3'},{Logo: SiJavascript, name: 'Javascript'}],
+    url: 'https://elassari19.github.io/bookLibrary/',
+    image: '/book.bmp',
+    code: 'https://github.com/elassari19/bookLibrary',
+    id: 'data6'
+  },
+];
+
+
+const articleData = [
   [
     {tag: 'h1', str: `The React Roadmap to Success`},
     {tag: 'p', str: `React is one of the most popular JavaScript frameworks currently in use, and even if you are not using it yourself, you are no doubt at least reasonably familiar with its existence. Used primarily for the development of Single Page Applications (SPA), React is an open-source library used for web development. A lot of extra development has been done to augment the basic React offering, and the eco-system is quite large. There are many tutorials, sites and other resources that will take you from the basic elements to advanced topics for React. In fact, there are so many resources and new developments available that it can be difficult to keep track of them all. Fortunately, we've assembled a set of resources and key information about React that will be useful for beginners and experienced developers alike. Enjoy!`},
@@ -269,3 +345,9 @@ export const reactTopics = [
     {tag: 'p', str: `Thank you for reading our React resource created by John Willoughby, Tara Z. Manicsic and Ed Charbeneau. We hope you have found it useful. Questions or comments? Leave a comment below – we love to hear from you!`}
   ]
 ]
+
+
+export {
+  workData,
+  articleData
+}

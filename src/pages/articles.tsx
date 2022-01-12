@@ -1,11 +1,12 @@
 import gsap from 'gsap'
+import Head from 'next/head'
 import React, { createElement, FC, useEffect, useRef, useState } from 'react'
 import { Tween } from 'react-gsap'
-import { Footer, Header, Link } from '../../components'
-import styles from '../../styles/Home.module.css'
-import { reactTopics } from './data'
+import { Footer, Header, Link } from '../components'
+import styles from '../styles/Home.module.css'
+import { articleData } from '../constant/data'
 
-const index: FC = () => {
+const Articles: FC = () => {
 
   const [content, setContent] = useState<number>(2)
 
@@ -28,7 +29,7 @@ const index: FC = () => {
           id: `section-${index+1}`,
           trigger: el,
           start: 'top center+=300',
-          toggleActions: 'play none none restart'
+          toggleActions: 'play none none none'
         }
       });
 
@@ -43,6 +44,10 @@ const index: FC = () => {
   return (
     <div className={styles.container} >
 
+      <Head>
+        <title> Articles </title>
+      </Head>
+
       <Header/>
 
       <main className={styles.main}>
@@ -55,24 +60,24 @@ const index: FC = () => {
         <Tween stagger={.5} >
           <div>
             {
-              reactTopics[0].map((item: any, idx)=>createElement(item.tag,{key: idx}, item.str))
+              articleData[0].map((item: any, idx)=>createElement(item.tag,{key: idx}, item.str))
             }
           </div>
 
           <div>
             {
-              reactTopics[1].map((item: any, idx: number)=>createElement(item.tag,{key: idx, onClick: ()=>setContent(idx>1?idx+1:2), href: '/articles', style: {...item?.style}}, item.str))
+              articleData[1].map((item: any, idx: number)=>createElement(item.tag,{key: idx, onClick: ()=>setContent(idx>1?idx+1:2), href: '/articles', style: {...item?.style}}, item.str))
             }
           </div>
 
-            {reactTopics[content].map((item: any, idx: number)=>{
+            {articleData[content].map((item: any, idx: number)=>{
               const { tag, str } = item;
               return(
                 <div className={styles.article} key={idx}>
                   {createElement(
                   tag,
                   {id: 'item', ref: addToRefs},
-                  item.children?.map((item: any, index: number)=>createElement(item.tag, {key: index, ref: addToRefs, href: '', style: {...item?.style}}, item.str))|| str
+                  item.children?.map((item: any, index: number)=>createElement(item.tag, {key: index, ref: addToRefs, href: '/articles', style: {...item?.style}}, item.str))|| str
                   )}
                 </div>
               )
@@ -91,4 +96,4 @@ const index: FC = () => {
   )
 }
 
-export default index
+export default Articles

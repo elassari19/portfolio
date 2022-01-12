@@ -1,6 +1,6 @@
 import {SiReact,  SiRedux, SiExpo, SiTypescript, SiAzurefunctions, SiStyledcomponents, SiSass} from 'react-icons/si';
 
-export default [
+const data = [
   {
     id: 'skill0',
     name:'ReactJS',
@@ -42,3 +42,5 @@ export default [
     Logo: SiSass
   },
 ]
+
+export default data
